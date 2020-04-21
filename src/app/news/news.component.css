@@ -1,0 +1,16 @@
+.news{
+    box-shadow: 2px 2px 3px 3px grey;
+    margin-top: 20px;
+}
+.news:hover{
+    box-shadow: 3px 3px 4px 5px grey;
+}
+#results{
+    float: left;
+    margin-left: 15px;
+    font-weight: bold;
+    color: blue;
+}
+.card-img-bottom{
+    width: auto;
+}

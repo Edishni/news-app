@@ -1,0 +1,34 @@
+.clls{
+    background-image: url("https://www.countryflags.io/<CountryCode>/shiny/64.png");
+}
+.disabled{
+    background-color: grey;
+    color: lightgrey;
+}
+.menu {
+    width: 100%;
+     
+      background-image: linear-gradient(rgba(228, 231, 178, 0.5), rgba(182, 243, 164, 0.5)), url("src/assets/news.jpg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #btnSearch{
+      display: block;
+  }
+  div{text-align: left;}
+  
+  #btnSearch:hover{
+box-shadow: 3px 3px 3px 3px rgb(73, 72, 72);
+transition: 0.6s;
+  }
+  .custom-radio>.custom-control-label:hover{
+      text-shadow:0 0 5px greenyellow ;
+      transition: 0.6s;
+  }
+  input[type=search]:hover , select:hover{
+background-color: rgb(210, 241, 163);
+  }

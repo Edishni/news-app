@@ -1,0 +1,45 @@
+<nav id="navbarmenu" class="navbar navbar-dark bg-dark justify-content-between">
+    <button class="navbar-toggler btn-sm" type="button" 
+    (click)="this.showThebar=!this.showThebar"
+    >
+    <i class="fas fa-bars"></i>
+  <!--     <span class="navbar-toggler-icon"></span> -->
+    </button>
+     <h1 class="navbar-brand ml-1" ><i class="fas fa-dragon"></i><b> Final Angular project</b></h1>
+     <span class="navbar-text text-light">{{this.usersrv.curentUser}}</span>
+<div class="logbtn">
+  
+        <a routerLink='/quest' class="btn btn-outline-warning" (click)="logOut()"
+     [class.hidden]="!this.login"
+     >LogOut</a>
+        <a routerLink='/login' class="btn btn-outline-success " (click)="logIn()"
+      [class.hidden]="this.login">LogIn</a>
+  </div>    
+    
+  </nav>
+
+<div id="navmenu" class="navmenu"
+[class.show]="this.showThebar"
+[class.hide]="!this.showThebar"
+>
+    <div class="bg-dark  p-3">
+      <ul class="navbar-nav mr-auto ml-2 ">
+        <li class="nav-item active">
+          <a class="btn btn-outline-light  mb-2" href="#">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-light  mb-2" href="#newsnav">News</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-light  mb-2" href="#contpage">Contacts</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-outline-light mb-2" href="#about">About</a>
+        </li>
+      </ul>
+    </div>
+ 
+
+

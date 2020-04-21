@@ -1,0 +1,52 @@
+#about{
+    padding-bottom: 20px;
+}
+.intcolledge{
+    border-right: 1px solid blue;
+    margin-right: 15px;
+padding: 10px;
+}
+.course{
+    border-right: 1px solid blue;
+    margin-right: 15px;
+    padding: 10px;
+}
+p{direction: rtl;
+    text-align: right;}
+h4{
+    padding: 5px;
+}
+#about>hr{
+    position: relative;
+    left: 35%;
+    border-bottom: 1px solid white;
+    width: 30%;
+
+}
+#titleabout{
+text-align: center;
+padding: 30px 0 20px 0;
+font-size: 30px;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+font-weight: bolder;
+text-shadow: 0 0 8px rgb(18, 38, 150);
+color: white;
+}
+a{
+    margin-top: 25px;
+}
+div>h2{
+    text-shadow: 0 0 8px rgb(18, 38, 150);
+}
+
+.btn.btn-outline-light {
+   
+    transition: 0.6s;
+
+   }
+.btn.btn-outline-light:hover {
+    transform: scale(1.05);
+    transition: 0.6s;
+    border: 1px solid gray;
+    box-shadow:2px 2px 2px 2px gray ;
+   }

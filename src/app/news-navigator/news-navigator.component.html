@@ -1,0 +1,65 @@
+<div #newsnav id="newsnav" class="menu">
+
+  <div class="row justify-content-center">
+
+    <div class="col-auto m-2">
+      <label class="mr-sm-2" for="inlineFormCustomSelect"><b>Source type</b></label>
+      <select #typS class="custom-select mr-sm-2" id="inlineFormCustomSelect" (click)="typS.value">
+        <option selected value="top-headlines">top-headlines</option>
+        <option value="everything">everything</option>
+        <option value="sources">sources</option>
+      </select>
+    </div>
+
+    <div class="col-auto m-2">
+      <label class="mr-sm-2" for="inlineFormCustomSelect1"><b>Category</b></label>
+      <select #categ class="custom-select mr-sm-2" id="inlineFormCustomSelect1"
+        [disabled]="(this.typS.value==='sources')" [class.disabled]="(this.typS.value==='sources')">
+        <option selected value=''>Choose...</option>
+        <option *ngFor="let cat of categories" value={{cat}}>{{cat}}</option>
+      </select>
+    </div>
+
+    <div class="col-auto m-2 ">
+      <label class="mr-sm-2" for="inlineFormCustomSelect3"><b>Language</b></label>
+      <select #lng class="custom-select mr-sm-2" id="inlineFormCustomSelect3">
+        <option *ngFor="let lang of languages" value={{lang}}>{{lang}}</option>
+        <option selected value=''>Choose...</option>
+      </select>
+    </div>
+
+    <div class="col-auto m-2">
+      <label class="mr-sm-2" for="inlineFormCustomSelect2"><b>Country</b></label>
+      <select #cntr class="custom-select mr-sm-2" id="inlineFormCustomSelect2">
+        <option *ngFor="let country of countries" value={{country.code}}>
+          {{country.code}}&emsp;{{country.countryName}}</option>
+        <option selected value=''>Choose...</option>
+      </select>
+    </div>    
+    
+    <div class="col-auto m-2">
+        <label class="mr-sm-2" for="inlineFormCustomSelect5"><b>Sort by ...</b></label>
+        <select #sortBy class="custom-select mr-sm-2" id="inlineFormCustomSelect5" >
+          <option selected value="publishedAT">publishedAT</option>
+          <option value="popularity">popularity</option>
+          <option value="relevancy">relevancy</option>
+        </select>
+      </div>
+
+   <div class="col-auto m-2">
+      <label class="mr-sm-2" for="inlineFormCustomSelect4"><b>Search by word : </b>
+        <input #word id="inlineFormCustomSelect4" class="custom-search mr-sm-2" type="search" placeholder="Search"
+          aria-label="Search"
+          [disabled]="(this.typS.value==='sources')"
+          [class.disabled]="(this.typS.value==='sources')"
+          ></label>
+    </div>
+
+
+    <div class="col-3 m-2 ">
+        <label class="mr-sm-2 sr-only" for="btnSearch"></label>
+        <button id="btnSearch" type="button" class="btn btn-primary p-2"
+          (click)="buildURL(this.typS.value,this.categ.value,this.cntr.value,this.lng.value,this.word.value,this.sortBy.value)">Show news</button>
+      </div>
+    </div> 
+</div>

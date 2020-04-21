@@ -1,0 +1,64 @@
+<div class="mainNews">
+  <div #news id="news" class="card-columns"*ngIf="this.getAPI.sourceType"><!--   -->
+    <h5 id="results"><i class="fas fa-list-ol"></i> Total results :<span style="color:red">{{this.getAPI.totalResults}} </span>
+    </h5>
+    <div class="news card card-cascade" *ngFor="let artnew of this.getAPI.articlesArr, let i=index">
+
+      <!-- Card image -->
+      <div class="view view-cascade overlay">
+        <img class="card-img-top" src={{artnew.urlToImage}} alt="Card image cap">
+        <a>
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+      <!-- Card content -->
+      <div class="card-body card-body-cascade text-center">
+        <!-- Title -->
+        <h4 class="card-title"><strong>{{artnew.title}}</strong></h4>
+        <h4 class="card-title">{{artnew.author}}</h4>
+        <h4 class="card-title"><a href="{{artnew.url}}">{{artnew.name}}</a></h4>
+        <!-- Subtitle -->
+        <h6 class="font-weight-bold indigo-text py-2">{{artnew.id}}</h6>
+        <!-- Text -->
+        <p class="card-text">{{artnew.description}}</p>
+      </div>
+      <!-- Card footer -->
+      <div class="card-footer text-muted text-center">
+        {{artnew.publishedAt}}
+      </div>
+    </div>
+  </div>
+
+  <!-- FOR SOURCES type results -->
+  <div #news id="news2" class="card-columns" *ngIf='!this.getAPI.sourceType'>
+    <div class="news card card-cascade" *ngFor="let srcnew of this.getAPI.sourcesArr, let i=index">
+      <!-- Card content -->
+      <div class="card-body card-body-cascade text-center">
+        <!-- Title -->
+        <h4 class="card-title"><a href="{{srcnew.url}}">{{srcnew.name}}</a></h4>
+        <!-- Subtitle -->
+        <h6 class="font-weight-bold indigo-text py-2">category : {{srcnew.category}}</h6>
+        <!-- Text -->
+        <p class="card-text">{{srcnew.description}}</p>
+      </div>
+      <!-- Card footer -->
+      <div class="card-footer text-muted text-center">
+        {{srcnew.language}}
+        <img class="card-img-bottom" src={{srcnew.img_flag}} alt="Card image cap">
+        {{srcnew.country}}
+      </div>
+    </div>
+  </div>
+
+</div>
+<!--
+  id: string; --ok
+        name: string;  --ok
+        description: string; --ok
+        url: string;  --ok
+        category: string;  --ok
+        language: string;  --ok
+        country: string;  -- ok
+        img_flag: string; //<img src="https://www.countryflags.io/<CountryCode>/shiny/64.png"> --ok
+
+    -->
