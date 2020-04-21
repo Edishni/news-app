@@ -1,5 +1,5 @@
-<div class="mainNews">
-  <div #news id="news" class="card-columns"*ngIf="this.getAPI.sourceType"><!--   -->
+<div #news id="news" class="mainNews">
+  <div  class="card-columns" *ngIf="this.getAPI.sourceType"><!--   -->
     <h5 id="results"><i class="fas fa-list-ol"></i> Total results :<span style="color:red">{{this.getAPI.totalResults}} </span>
     </h5>
     <div class="news card card-cascade" *ngFor="let artnew of this.getAPI.articlesArr, let i=index">

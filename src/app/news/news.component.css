@@ -1,6 +1,10 @@
+.mainnews{
+    width: 100%;
+    max-width: 100vh;
+}
 .news{
     box-shadow: 2px 2px 3px 3px grey;
-    margin-top: 20px;
+    margin: 20px 10px 10px 10px;
 }
 .news:hover{
     box-shadow: 3px 3px 4px 5px grey;
