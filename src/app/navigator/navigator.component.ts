@@ -9,9 +9,10 @@ import { UserService } from '../user.service';
 })
 export class NavigatorComponent implements OnInit {
   showThebar:boolean=false;
-  login:boolean=false;
+ /*  login:boolean=false; */
   constructor(private authorize: AuthorizationService, public usersrv: UserService) { }
-logIn(){
+  
+/* logIn(){
   this.login=true;
   
 }
@@ -20,7 +21,7 @@ logIn(){
     this.login=false;
     this.authorize.doLogout();
 
-  }
+  } */
 
   ngOnInit() {
     

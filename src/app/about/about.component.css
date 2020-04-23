@@ -1,5 +1,12 @@
 #about{
     padding-bottom: 20px;
+    width: 100%;
+    margin-left: none;
+    margin-right: none;
+}
+#about>.row{
+    margin-left: none;
+    margin-right: none;
 }
 .intcolledge{
     border-right: 1px solid blue;

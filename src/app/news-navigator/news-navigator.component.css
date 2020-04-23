@@ -1,38 +1,97 @@
-.clls{
-    background-image: url("https://www.countryflags.io/<CountryCode>/shiny/64.png");
+.conteinernews {
+  background-image: linear-gradient(rgba(161, 161, 159, 0.5), rgba(243, 247, 242, 0.5)), url("src/assets/news1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
-.disabled{
-    background-color: grey;
-    color: lightgrey;
+
+#mainp {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding-top: 10%;
 }
-.menu {
-    width: 100%;
-     
-      background-image: linear-gradient(rgba(228, 231, 178, 0.5), rgba(182, 243, 164, 0.5)), url("src/assets/news.jpg");
+
+.clls {
+  background-image: url("https://www.countryflags.io/<CountryCode>/shiny/64.png");
+}
+
+.disabled {
+  background-color: grey;
+  color: lightgrey;
+}
+
+.menu>.row{
+  /*       background-image: linear-gradient(rgba(228, 231, 178, 0.5), rgba(182, 243, 164, 0.5)), url("src/assets/news.jpg");
       background-position: center;
       background-repeat: no-repeat;
-      background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  #btnSearch{
-      display: block;
-  }
-  div{text-align: left;}
+      background-size: cover; */
   
-  #btnSearch:hover{
-box-shadow: 3px 3px 3px 3px rgb(73, 72, 72);
-transition: 0.6s;
-  }
-  .custom-radio>.custom-control-label:hover{
-      text-shadow:0 0 5px greenyellow ;
-      transition: 0.6s;
-  }
-  input[type=search]:hover , select:hover{
-background-color: rgb(210, 241, 163);
-  }
-  #newsnav>.row{
-    margin-left: none;
-   margin-right: none;
-  }
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  
+}
+.menu{
+
+  padding-bottom: 60px;
+}
+#btnSearch { 
+  text-align: center;
+  width: 200px;
+  margin-bottom: 20px;
+}
+#btnSearch:hover {
+  box-shadow: 3px 3px 3px 3px rgb(73, 72, 72);
+  transition: 0.6s;
+}
+#lastline{
+  display:inline-flex;
+  width: 100%;
+ 
+
+}
+
+div {
+  text-align: left;
+}
+
+
+
+.custom-radio>.custom-control-label:hover {
+  text-shadow: 0 0 5px greenyellow;
+  transition: 0.6s;
+}
+
+input[type=search]:hover,
+select:hover {
+  background-color: rgb(210, 241, 163);
+}
+
+.conteinernews>#newsnav>.row {
+  margin-left: none;
+  margin-right: none;
+}
+
+.conteinernews>#mainp>.row {
+  margin-left: none;
+  margin-right: none;
+}
+
+.row {
+  margin-left: none !important;
+  margin-right: none !important;
+}
+
+.brand-title {
+  text-shadow: 0 0 8px yellow;
+}
+/* .custom-select , label , input{
+  text-align: center;
+ 
+  margin-left: 15px;
+  min-width: 250px;
+  max-width: 300px;
+} */

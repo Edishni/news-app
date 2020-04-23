@@ -17,7 +17,9 @@
   z-index: 15;
   border-radius: 5px;
 }
-
+#logo{
+  text-shadow: 0 0 5px rgb(223, 41, 9);
+}
 #navmenu.show {
   /*   animation: fadeIn ease 1s; */
   
@@ -79,4 +81,7 @@
 
 a.hidden{
     visibility: hidden;
+}
+#username{
+  margin-right: 100px;
 }

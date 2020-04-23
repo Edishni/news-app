@@ -7,7 +7,8 @@ import * as firebase from 'firebase/app';
   providedIn: 'root'
 })
 export class UserService {
-curentUser:any='Welcome QUEST';
+curentUser:any='QUEST';
+Logined : boolean;
   constructor( public db:AngularFirestore,public abAuth:AngularFireAuth) { }
 
   getCurrentUser(){
@@ -15,8 +16,8 @@ curentUser:any='Welcome QUEST';
       (resolve,reject) =>{
         const user = firebase.auth().onAuthStateChanged( (user) => {
           console.log(user);
-          user? this.curentUser=user.displayName:this.curentUser='Welcome QUEST';
-          
+          user? this.curentUser=user.displayName:this.curentUser='QUEST';
+          user? this.Logined=true:this.Logined=false;
           user? resolve(user) : resolve(null);
         })
 

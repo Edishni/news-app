@@ -154,7 +154,10 @@ export class GetApiServiceService {
 
       ele.sources.forEach(ele => {
         this.fromGet2 = ele;
-
+        let tempcntr = this.fromGet2.country;
+        tempcntr = tempcntr.toUpperCase( );
+        let result = this.countryArr.find(({ code }) => code === `${tempcntr}`);
+    
         this.sourcesArr.push({
           id: this.fromGet2.id,
           name: this.fromGet2.name,
@@ -162,18 +165,10 @@ export class GetApiServiceService {
           url: this.fromGet2.url,
           category: this.fromGet2.category,
           language: this.fromGet2.language,
-          country: this.fromGet2.country,
+          country: result.countryName,
           img_flag: `https://www.countryflags.io/${this.fromGet2.country}/flat/24.png`
         });
-        /*      id: string;
-        name: string;
-        description: string;
-        url: string;
-        category: string;
-        language: string;
-        country: string;  
-        img_flag: string; //<img src="https://www.countryflags.io/<CountryCode>/shiny/64.png">
-        */
+
       });
     });
     console.log('sources array');

@@ -10,6 +10,8 @@
   }
   #mycard{
       width: 90%;
+      margin-left: none;
+      margin-right: none;
   }
   #mycard>h1>hr {
     position: relative;

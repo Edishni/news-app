@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { GetApiServiceService } from '../get-api-service.service';
-import { News } from '../classes/News-articles';
 
 @Component({
   selector: 'app-main',
@@ -9,8 +7,7 @@ import { News } from '../classes/News-articles';
 })
 export class MainComponent implements OnInit {
 
-  constructor(private getAPI : GetApiServiceService) { }
-articles:News[];
+  constructor() { }
 
 
   ngOnInit() {

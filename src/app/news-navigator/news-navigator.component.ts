@@ -17,7 +17,7 @@ export class NewsNavigatorComponent implements OnInit {
 
 
 
-  constructor(private getAPIdetails: GetApiServiceService) { }
+  constructor(public getAPIdetails: GetApiServiceService) { }
 
   buildURL(typeSrc, categ, countr, lang, word, sortby) {
     console.log(typeSrc, categ, countr, lang, word, sortby);
