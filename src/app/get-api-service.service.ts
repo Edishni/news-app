@@ -127,6 +127,18 @@ export class GetApiServiceService {
       elem.articles.forEach(ele => {
         this.fromGet = ele;
 
+
+let json = `"${this.fromGet.publishedAt}"`;
+
+let dateStr = JSON.parse(json);  
+console.log(dateStr); // 2014-01-01T23:28:56.782Z
+        
+let date = new Date(dateStr);
+
+var ndate = date.toUTCString();
+console.log(date);
+
+ // publishedAt: this.fromGet.publishedAt,
         this.articlesArr.push({
           id: this.fromGet.source.id,
           name: this.fromGet.source.name,
@@ -135,7 +147,7 @@ export class GetApiServiceService {
           description: this.fromGet.description,
           url: this.fromGet.url,
           urlToImage: this.fromGet.urlToImage,
-          publishedAt: this.fromGet.publishedAt,
+          publishedAt: ndate,                                   
           content: this.fromGet.content
         });
       });
