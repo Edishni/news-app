@@ -19,7 +19,7 @@
       <div class="row">
 
         <div class="col-sx-11 col-sm-6 col-md-3 m-1">
-          <label class="mr-sm-1" for="inlineFormCustomSelect"><b>Source type</b></label>
+          <label class="mr-sm-1" for="inlineFormCustomSelect"><b>Endpoints</b></label>
           <select #typS class="custom-select mr-sm-1" id="inlineFormCustomSelect" (click)="typS.value">
             <option selected value="top-headlines">top-headlines</option>
             <option value="everything">everything</option>
@@ -30,7 +30,9 @@
         <div class="col-sx-11 col-sm-5 col-md-3 m-1">
           <label class="mr-sm-1" for="inlineFormCustomSelect1"><b>Category</b></label>
           <select #categ class="custom-select mr-sm-1" id="inlineFormCustomSelect1"
-            [disabled]="(this.typS.value==='sources')" [class.disabled]="(this.typS.value==='sources')">
+            [disabled]="(this.typS.value==='sources')" [class.disabled]="(this.typS.value==='sources')"
+            [disabled]="(this.typS.value==='everything')" [class.disabled]="(this.typS.value==='everything')"
+            >
             <option selected value=''>Choose...</option>
             <option *ngFor="let cat of categories" value={{cat}}>{{cat}}</option>
           </select>
@@ -38,7 +40,9 @@
 
         <div class="col-sx-11 col-sm-5 col-md-3 m-1">
           <label class="mr-sm-1" for="inlineFormCustomSelect3"><b>Language</b></label>
-          <select #lng class="custom-select mr-sm-1" id="inlineFormCustomSelect3">
+          <select #lng class="custom-select mr-sm-1" id="inlineFormCustomSelect3"
+          [disabled]="(this.typS.value==='top-headlines')" [class.disabled]="(this.typS.value==='top-headlines')"
+          >
             <option *ngFor="let lang of languages" value={{lang}}>{{lang}}</option>
             <option selected value=''>Choose...</option>
           </select>
@@ -46,7 +50,9 @@
 
         <div class="col-sx-11 col-sm-5 col-md-3 m-1">
           <label class="mr-sm-1" for="inlineFormCustomSelect2"><b>Country</b></label>
-          <select #cntr class="custom-select mr-sm-1" id="inlineFormCustomSelect2">
+          <select #cntr class="custom-select mr-sm-1" id="inlineFormCustomSelect2"
+          [disabled]="(this.typS.value==='everything')" [class.disabled]="(this.typS.value==='everything')"
+          >
             <option *ngFor="let country of countries" value={{country.code}}>
               {{country.code}}&emsp;{{country.countryName}}</option>
             <option selected value=''>Choose...</option>
@@ -55,8 +61,10 @@
 
         <div class="col-sx-11 col-sm-5 col-md-3 m-1">
           <label class="mr-sm-1" for="inlineFormCustomSelect5"><b>Sort by ...</b></label>
-          <select #sortBy class="custom-select mr-sm-1" id="inlineFormCustomSelect5">
-            <option selected value="publishedAT">publishedAT</option>
+          <select #sortBy class="custom-select mr-sm-1" id="inlineFormCustomSelect5"
+          [disabled]="(this.typS.value==='sources')" [class.disabled]="(this.typS.value==='sources')"
+          >
+            <option selected value="publishedAT">recent publications</option>
             <option value="popularity">popularity</option>
             <option value="relevancy">relevancy</option>
           </select>

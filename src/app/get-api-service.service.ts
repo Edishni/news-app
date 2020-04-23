@@ -171,6 +171,7 @@ export class GetApiServiceService {
 
       });
     });
+    this.totalResults = "no data";
     console.log('sources array');
     console.log(this.sourcesArr);
 
