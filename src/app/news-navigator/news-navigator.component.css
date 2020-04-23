@@ -23,34 +23,38 @@
   color: lightgrey;
 }
 
-.menu>.row{
+.menu>.row {
   /*       background-image: linear-gradient(rgba(228, 231, 178, 0.5), rgba(182, 243, 164, 0.5)), url("src/assets/news.jpg");
       background-position: center;
       background-repeat: no-repeat;
       background-size: cover; */
-  
+
   align-items: center;
   display: flex;
   justify-content: space-around;
-  
+
 }
-.menu{
+
+.menu {
 
   padding-bottom: 60px;
 }
-#btnSearch { 
+
+#btnSearch {
   text-align: center;
   width: 200px;
   margin-bottom: 20px;
 }
+
 #btnSearch:hover {
   box-shadow: 3px 3px 3px 3px rgb(73, 72, 72);
   transition: 0.6s;
 }
-#lastline{
-  display:inline-flex;
+
+#lastline {
+  display: inline-flex;
   width: 100%;
- 
+
 
 }
 
@@ -88,6 +92,7 @@ select:hover {
 .brand-title {
   text-shadow: 0 0 8px yellow;
 }
+
 /* .custom-select , label , input{
   text-align: center;
  
@@ -95,3 +100,75 @@ select:hover {
   min-width: 250px;
   max-width: 300px;
 } */
+/* // Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  .brand-title {
+    font-size: x-large;
+    margin-top: 65px;
+  }
+  .brand-text {
+    font-size: medium;
+  }
+  #btnSearch {
+    
+    width: 120px;
+    font-size: large;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+  .brand-title {
+    font-size: x-large;
+    margin-top: 65px;
+  }
+
+  .brand-text {
+    font-size: medium;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+
+  #logo {
+    font-size: large;
+  }
+
+  #username {
+    font-size: medium;
+  }
+
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+
+  #logo {
+    font-size: large;
+  }
+
+  #username {
+    font-size: medium;
+  }
+
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+
+  #logo {
+    font-size: large;
+  }
+
+  #username {
+    font-size: medium;
+  }
+
+}
