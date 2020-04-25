@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GetApiServiceService } from '../get-api-service.service';
 import { Country } from '../classes/country';
+import { ThemesControlService } from '../themes-control.service';
 
 @Component({
   selector: 'app-news-navigator',
@@ -17,7 +18,7 @@ export class NewsNavigatorComponent implements OnInit {
 
 
 
-  constructor(public getAPIdetails: GetApiServiceService) { }
+  constructor(public getAPIdetails: GetApiServiceService, public themes : ThemesControlService) { }
 
   buildURL(typeSrc, categ, countr, lang, word, sortby) {
     console.log(typeSrc, categ, countr, lang, word, sortby);

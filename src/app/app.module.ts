@@ -23,6 +23,7 @@ import { NewsNavigatorComponent } from './news-navigator/news-navigator.componen
 import { AboutComponent } from './about/about.component';
 import { ContactsComponent } from './contacts/contacts.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

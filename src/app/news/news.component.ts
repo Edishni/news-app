@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GetApiServiceService } from '../get-api-service.service';
 import { News } from '../classes/News-articles';
 import { Sources } from '../classes/News-sources';
+import { ThemesControlService } from '../themes-control.service';
 
 @Component({
   selector: 'app-news',
@@ -9,7 +10,7 @@ import { Sources } from '../classes/News-sources';
   styleUrls: ['./news.component.css']
 })
 export class NewsComponent implements OnInit {
-  constructor(public getAPI : GetApiServiceService) { }
+  constructor(public getAPI : GetApiServiceService, public themes : ThemesControlService) { }
 
   ngOnInit() {
     let firstURL='http://newsapi.org/v2/top-headlines?country=il&apiKey=79c0f667b4ef402c90fc0b199b103db4';

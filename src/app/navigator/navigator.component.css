@@ -11,8 +11,8 @@
   position: fixed;
   margin: 0;
   left: 0;
-  top: 63px;
-  color: white;
+  top: 60px;
+  /* color: white; */
   box-shadow: 3px 3px 3px 3px grey;
   z-index: 15;
   border-radius: 5px;
@@ -22,21 +22,22 @@
 }
 #navmenu.show {
   /*   animation: fadeIn ease 1s; */
-  
   opacity: 0.8;
   transition: 1s;
   width: 120px;
-
   left: 0;
 }
 
+ul,li , li>input[type="radio"]{
+  list-style-type: none;
+  align-items: baseline;
+}
 
 #navmenu.hide {
   /*   animation: fadeOut ease 1s; */
   opacity: 0;
   transition: 1s;
   width: 0px;
- 
   left: -125px;
   pointer-events: none;
 }
@@ -73,12 +74,12 @@
     visibility: hidden;
   }
 }
-.nav-item>.nav-link{color: white;}
-.nav-item>.btn:hover{
+/* .nav-item>.nav-link{color: white;} */
+/* .nav-item>.btn:hover{
   box-shadow: 3px 3px 3px 3px black;
   transition: 0.6s;
 }
-
+ */
 a.hidden{
     visibility: hidden;
 }

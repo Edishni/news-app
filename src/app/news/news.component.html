@@ -1,17 +1,17 @@
 
-  <div id="news" class="card-columns" *ngIf="this.getAPI.sourceType"><!--   -->
+  <div id="news" class="card-columns {{themes.appTheme}}" *ngIf="this.getAPI.sourceType"><!--   -->
  
     <div class="news card card-cascade" *ngFor="let artnew of this.getAPI.articlesArr, let i=index">
 
       <!-- Card image -->
-      <div class="view view-cascade overlay">
+      <div class="view view-cascade overlay  {{themes.appChildTheme}}">
         <img class="card-img-top" src={{artnew.urlToImage}} alt="Card image cap">
         <a>
           <div class="mask rgba-white-slight"></div>
         </a>
       </div>
       <!-- Card content -->
-      <div class="card-body card-body-cascade text-center">
+      <div class="card-body card-body-cascade text-center  {{themes.appTheme}}">
         <!-- Title -->
         <h4 class="card-title"><strong>{{artnew.title}}</strong></h4>
         <h4 class="card-title">{{artnew.author}}</h4>
@@ -22,17 +22,17 @@
         <p class="card-text">{{artnew.description}}</p>
       </div>
       <!-- Card footer -->
-      <div class="card-footer text-muted text-center">
-        {{artnew.publishedAt}}
+      <div class="card-footer text-center  {{themes.appChildTheme}}">
+        {{artnew.publishedAt | date:'d MMMM, y HH:mm'}}
       </div>
     </div>
   </div>
 
   <!-- FOR SOURCES type results -->
-  <div #news id="news2" class="card-columns" *ngIf='!this.getAPI.sourceType'>
-    <div class="news card card-cascade" *ngFor="let srcnew of this.getAPI.sourcesArr, let i=index">
+  <div #news id="news2" class="card-columns  {{themes.appTheme}}" *ngIf='!this.getAPI.sourceType'>
+    <div class="news card card-cascade  {{themes.appChildTheme}}" *ngFor="let srcnew of this.getAPI.sourcesArr, let i=index">
       <!-- Card content -->
-      <div class="card-body card-body-cascade text-center">
+      <div class="card-body card-body-cascade text-center ">
         <!-- Title -->
         <h4 class="card-title"><a href="{{srcnew.url}}">{{srcnew.name}}</a></h4>
         <!-- Subtitle -->
@@ -41,7 +41,7 @@
         <p class="card-text">{{srcnew.description}}</p>
       </div>
       <!-- Card footer -->
-      <div class="card-footer text-muted text-center">
+      <div class="card-footer text-muted text-center  {{themes.appTheme}}">
         {{srcnew.language}}
         <img class="card-img-bottom" src={{srcnew.img_flag}} alt="Card image cap">
         {{srcnew.country}}

@@ -46,12 +46,12 @@ div>h2{
     text-shadow: 0 0 8px rgb(18, 38, 150);
 }
 
-.btn.btn-outline-light {
-   
+.btnLinks{
     transition: 0.6s;
+    margin-top: 10px;
 
    }
-.btn.btn-outline-light:hover {
+.btnLinks:hover {
     transform: scale(1.05);
     transition: 0.6s;
     border: 1px solid gray;

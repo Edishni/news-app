@@ -1,7 +1,7 @@
-  <div class="conteinernews">
-    <div id="mainp" class="mainNews ">
-      <div class="row m-0 justify-content-center text-dark">
-        <div id="header" class="col-md-12 text-center">
+  <div class="{{themes.appTheme}}">
+    <div id="mainp" class="mainNews mb-4">
+      <div class="row m-2 p-2 justify-content-center {{themes.appTheme}} {{themes.appBorderTheme}} rounded ">
+        <div id="header" class="col-md-12 text-center ">
           <h1 class="brand-title">The News Portal App </h1>
           <small>from <u><a href="newsapi.org">newsapi.org</a></u></small>
 
@@ -9,14 +9,14 @@
               href="https://www.int-college.co.il/"><u><b> iNT College.</b></u></a>
             <br>Created by<a href="http://linkedin.com/in/edwardtchaevsky" title="Edward T. LinkedIn page"><u><b>EDWARD
                   T.</b></u></a></p>
-          <hr>
+         
         </div>
       </div>
     </div>
 
-    <div id="newsnav" class="menu">
+    <div id="newsnav" class="menu mt-4">
 
-      <div class="row">
+      <div class="row ml-0 mr-0 pb-2 {{themes.appChildTheme}} {{themes.appBorderTheme}}">
 
         <div class="col-sx-11 col-sm-6 col-md-3 m-1">
           <label class="mr-sm-1" for="inlineFormCustomSelect"><b>Endpoints</b></label>
@@ -82,7 +82,7 @@
 
     </div> 
 
-    <div id="lastline" class="row justify-content-center">
+    <div id="lastline" class="row ml-0 mr-0 justify-content-center mt-1">
       <div  class="col-6 text-center">
          <button id="btnSearch" type="button" class="btn btn-primary text-center btn-lg p-1"
         (click)="buildURL(this.typS.value,this.categ.value,this.cntr.value,this.lng.value,this.word.value,this.sortBy.value)"

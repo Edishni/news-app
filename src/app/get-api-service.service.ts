@@ -127,18 +127,17 @@ export class GetApiServiceService {
       elem.articles.forEach(ele => {
         this.fromGet = ele;
 
-
+/* 
 let json = `"${this.fromGet.publishedAt}"`;
 
-let dateStr = JSON.parse(json);  
-console.log(dateStr); // 2014-01-01T23:28:56.782Z
-        
-let date = new Date(dateStr);
+let dateStr = JSON.parse(json);   */
+/* console.log(dateStr);  */// 2014-01-01T23:28:56.782Z  pipe??? {{lastUpdate | date:'dd/MM/yy, HH:mm'}}
+     
+/* let date = new Date(dateStr);
+var ndate = date.toUTCString(); */
 
-var ndate = date.toUTCString();
-console.log(date);
 
- // publishedAt: this.fromGet.publishedAt,
+ //publishedAt: ndate,    
         this.articlesArr.push({
           id: this.fromGet.source.id,
           name: this.fromGet.source.name,
@@ -147,7 +146,7 @@ console.log(date);
           description: this.fromGet.description,
           url: this.fromGet.url,
           urlToImage: this.fromGet.urlToImage,
-          publishedAt: ndate,                                   
+          publishedAt: this.fromGet.publishedAt,                                
           content: this.fromGet.content
         });
       });
@@ -183,7 +182,7 @@ console.log(date);
 
       });
     });
-    this.totalResults = "no data";
+    this.totalResults = "unknown results";
     console.log('sources array');
     console.log(this.sourcesArr);
 
