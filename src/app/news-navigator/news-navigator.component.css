@@ -1,3 +1,13 @@
+#mainnav{
+  background-image: linear-gradient(rgba(100, 100, 100, 0.5), rgba(255, 255, 255, 0.5)), url("src/assets/news2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.mainNews{
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px 3px rgb(73, 72, 72);
+}
 #mainp {
   display: flex;
   align-items: center;
@@ -17,14 +27,9 @@
   justify-content: space-around;
 }
 
-.menu {
-  padding-bottom: 60px;
-}
-
 #btnSearch {
   text-align: center;
   width: 200px;
-  margin-bottom: 20px;
 }
 
 #btnSearch:hover {
@@ -35,15 +40,11 @@
 #lastline {
   display: inline-flex;
   width: 100%;
-
-
 }
 
 div {
   text-align: left;
 }
-
-
 
 .custom-radio>.custom-control-label:hover {
   text-shadow: 0 0 5px greenyellow;
@@ -55,32 +56,10 @@ select:hover {
   background-color: rgb(210, 241, 163);
 }
 
-.conteinernews>#newsnav>.row {
-  margin-left: none;
-  margin-right: none;
-}
-
-.conteinernews>#mainp>.row {
-  margin-left: none;
-  margin-right: none;
-}
-
-.row {
-  margin-left: none !important;
-  margin-right: none !important;
-}
-
 .brand-title {
   text-shadow: 0 0 8px yellow;
 }
 
-/* .custom-select , label , input{
-  text-align: center;
- 
-  margin-left: 15px;
-  min-width: 250px;
-  max-width: 300px;
-} */
 /* // Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
   .brand-title {
@@ -93,7 +72,6 @@ select:hover {
   }
 
   #btnSearch {
-
     width: 120px;
     font-size: large;
     margin-bottom: 20px;

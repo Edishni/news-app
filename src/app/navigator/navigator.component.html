@@ -1,4 +1,4 @@
-<nav id="navbarmenu" class="navbar navbar-dark {{themes.appBorderTheme}} {{myTheme}} justify-content-start">
+<nav id="navbarmenu" class="navbar navbar-dark  {{myTheme}} justify-content-start">
   <!--  bg-dark -->
   <button class="navbar-toggler {{myTheme}} btn-sm" type="button" (click)="this.showThebar=!this.showThebar">
     <i class="fas fa-bars"></i>
@@ -12,7 +12,7 @@
 <div id="navmenu" class="navmenu {{themes.appBorderTheme}} rounded-right {{myTheme}}" [class.show]="this.showThebar"
   [class.hide]="!this.showThebar">
   <div class="p-3">
-    <ul class="navbar-nav ml-2 {{myTheme}}">
+    <ul class="navbar-nav ml-2 list-unstyled {{myTheme}}">
       <li class="nav-item active">
         <a class="btn mb-2 {{myTheme}}" href="main#mainp">Home
           <span class="sr-only">(current)</span>
@@ -29,13 +29,14 @@
       </li>
 
 
-      <ul class="nav-item justify-content-start {{myTheme}}">
+      <ul class="nav-item justify-content-start list-unstyled {{myTheme}}">
         <!--  appBgThemes [bgColor]="myColor" -->
         <li>
           <hr>
           <span><i class="fab fa-bootstrap size:2x"></i>
             themes:</span>
         </li>
+  
         <li>
           <input type="radio" name="colors" checked (click)="myTheme=themes.changeTheme('dark')" /> Dark
         </li>

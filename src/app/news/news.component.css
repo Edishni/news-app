@@ -1,3 +1,9 @@
+#news{
+    background-image: linear-gradient(rgba(100, 100, 100, 0.5), rgba(255, 255, 255, 0.5)), url("src/assets/news2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 .news{
     width: 100%;
     box-shadow: 2px 2px 3px 3px grey;

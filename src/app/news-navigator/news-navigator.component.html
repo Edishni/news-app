@@ -1,14 +1,13 @@
-  <div class="{{themes.appTheme}}">
-    <div id="mainp" class="mainNews mb-4">
-      <div class="row m-2 p-2 justify-content-center {{themes.appTheme}} {{themes.appBorderTheme}} rounded ">
+  <div id="mainnav" class="{{themes.appTheme}}" >
+    <div id="mainp" class=" mb-4">
+      <div class="mainNews row m-2 p-2 justify-content-center {{themes.appTheme}} {{themes.appBorderTheme}} ">
         <div id="header" class="col-md-12 text-center ">
           <h1 class="brand-title">The News Portal App </h1>
-          <small>from <u><a href="newsapi.org">newsapi.org</a></u></small>
+          <small>from <u><a href="https://newsapi.org/">newsapi.org</a></u></small>
 
           <p class="brand-text">This page contain final project in Angular on FullStack .NET course in <a
               href="https://www.int-college.co.il/"><u><b> iNT College.</b></u></a>
-            <br>Created by<a href="http://linkedin.com/in/edwardtchaevsky" title="Edward T. LinkedIn page"><u><b>EDWARD
-                  T.</b></u></a></p>
+            <br>Created by <a href="main#contpage" title="Edward T."><u><b> Tchaevsky E.</b></u></a></p>
          
         </div>
       </div>
@@ -82,17 +81,17 @@
 
     </div> 
 
-    <div id="lastline" class="row ml-0 mr-0 justify-content-center mt-1">
+    <div id="lastline" class="row ml-0 mt-2 mr-0 mb-2 justify-content-center">
       <div  class="col-6 text-center">
          <button id="btnSearch" type="button" class="btn btn-primary text-center btn-lg p-1"
         (click)="buildURL(this.typS.value,this.categ.value,this.cntr.value,this.lng.value,this.word.value,this.sortBy.value)"
         >Show News</button></div>
         
 
-      <div class="col-6">
-        <small><i class="fas fa-list-ol"></i> Total results :
+      <div class="col-6 text-dark">
+        <p><i class="fas fa-list-ol"></i> Total results :
           <span style="color:red">{{this.getAPIdetails.totalResults}} </span>
-        </small></div>
+        </p></div>
         
       </div>
   </div>
