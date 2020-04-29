@@ -19,9 +19,20 @@ export class GetApiServiceService {
   //["business", "entertainment", "general", "health", "science", "sports", "technology"]; 
   readonly category: string[] = ["business", "entertainment", "general", "health", "science", "sports", "technology"];
   // ["en", "he", "ru", "ar", "de", "es", "fr", "it", "nl", "no", "pt", "se", "ud", "zh"];
-  readonly language: string[] = ["en", "he", "ru", "ar", "de", "es", "fr", "it", "nl", "no", "pt", "se", "ud", "zh"];
-  //has counties.ts file
-  readonly countryArr: Country[] = countries;
+  readonly language: string[] = ["ar","de","en","es", "fr", "he","it", "nl", "no", "pt","ru", "se", "ud","zh"];      
+  //has counties.ts file  , to order by alephbet
+  countryArr: Country[] = countries.sort(function(a, b) {
+  let cNameA = a.countryName.toUpperCase(); // ignore upper and lowercase
+  let cNameB = b.countryName.toUpperCase(); // ignore upper and lowercase
+  if (cNameA < cNameB) {
+    return -1;
+  }
+  if (cNameA > cNameB) {
+    return 1;
+  };
+   // coutry Names must be equal
+  return 0;
+}); 
   readonly sortByType: string[] = ["relevancy", "popularity", "publishedAt"];
 
 
@@ -92,6 +103,9 @@ export class GetApiServiceService {
       if (word) {
         block3 += `q=${word}&`; // it first in request     
       }
+      else{
+        this.totalResults = "add any word for search...";
+      }
       if (lang) {
         block3 += `language=${lang}&`;
       }
@@ -127,17 +141,6 @@ export class GetApiServiceService {
       elem.articles.forEach(ele => {
         this.fromGet = ele;
 
-/* 
-let json = `"${this.fromGet.publishedAt}"`;
-
-let dateStr = JSON.parse(json);   */
-/* console.log(dateStr);  */// 2014-01-01T23:28:56.782Z  pipe??? {{lastUpdate | date:'dd/MM/yy, HH:mm'}}
-     
-/* let date = new Date(dateStr);
-var ndate = date.toUTCString(); */
-
-
- //publishedAt: ndate,    
         this.articlesArr.push({
           id: this.fromGet.source.id,
           name: this.fromGet.source.name,

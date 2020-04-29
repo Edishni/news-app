@@ -21,6 +21,17 @@
   color: lightgrey;
 }
 
+.title2:hover{
+    text-shadow: 0 0 12px rgb(255, 251, 0);
+    transition: 0.4s;
+    color: rgb(57, 57, 236);
+}
+.title2{
+    transition: 0.4s;
+    text-shadow: 0 0 15px rgb(0, 0, 0);
+    color: rgb(255, 251, 0);
+}
+
 .menu>.row {
   align-items: center;
   display: flex;

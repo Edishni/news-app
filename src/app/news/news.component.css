@@ -4,24 +4,33 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-.news{
+.new{
     width: 100%;
     box-shadow: 2px 2px 3px 3px grey;
-    margin-top: 20px;
+    margin: 15px;
     justify-content: center;
-    margin-left: none;
-    margin-right: none;
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
      -ms-animation: fadein 2s; /* Internet Explorer */
       -o-animation: fadein 2s; /* Opera < 12.1 */
          animation: fadein 2s;
 }
-.news:hover{
-    box-shadow: 3px 3px 4px 5px grey;
+.new:hover{
+    box-shadow: 0 0 3px 3px rgba(255, 238, 0, 0.808);
+    transition: 0.6s;
 }
 .card-img-bottom{
     width: auto;
+}
+.card-title>a:hover{
+    text-shadow: 0 0 12px rgb(255, 251, 0);
+    transition: 0.4s;
+    color: rgb(57, 57, 236);
+}
+.card-title>a{
+    transition: 0.4s;
+    text-shadow: 0 0 12px rgb(0, 0, 0);
+    color: rgb(255, 251, 0);
 }
 
  /*  // Small devices (landscape phones, 576px and up) */

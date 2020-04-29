@@ -10,16 +10,9 @@ const routes: Routes = [
   {path:'quest',component : QuestComponent},
   {path:'logIn',component : LoginComponent},
   {path:'main',component:MainComponent,canActivate:[AuthorizationGuard]},
-  /* {path:'main/**',component : MainComponent,canActivate:[AuthorizationGuard]}, */
-/*     children: [
-    { path: '', redirectTo: 'main', pathMatch: 'full' },
-    { path: 'newsnav', component: NewsNavigatorComponent },
-    { path: 'news', component: NewsComponent },
-    { path: '**', component: MainComponent },
-  ]},  */
-/*   {path:'./news',component:NewsComponent,canActivate:[AuthorizationGuard]},
-  {path:'./newsnav',component:NewsNavigatorComponent,canActivate:[AuthorizationGuard]}, */
- 
+  {path:'main/**',component : MainComponent,canActivate:[AuthorizationGuard]}, 
+  {path:'**',component : QuestComponent}, 
+
 ];
 
 @NgModule({

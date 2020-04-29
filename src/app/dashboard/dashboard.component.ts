@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AuthorizationService } from '../authorization.service';
 import { UserService } from '../user.service';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,7 +12,7 @@ import { Router } from '@angular/router';
 export class DashboardComponent implements OnInit {
 
  
-  constructor(private authorize: AuthorizationService, public usersrv: UserService , private router : Router) { }
+  constructor(private authorize: AuthorizationService, public usersrv: UserService , private router : Router, private spinner1 : NgxSpinnerService) { }
   
 logIn(){
   
@@ -26,7 +27,7 @@ logIn(){
   }
   
   ngOnInit() {
-    
+   
   }
 
 }

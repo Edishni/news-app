@@ -1,17 +1,18 @@
 
-  <div id="news" class="card-columns {{themes.appTheme}} "  *ngIf="this.getAPI.sourceType"><!--   -->
+  <div id="news" class="card-columns {{themes.appTheme}} p-4"  *ngIf="this.getAPI.sourceType"><!--   -->
  
-    <div class="news card card-cascade m-1" *ngFor="let artnew of this.getAPI.articlesArr, let i=index">
+    <div class="new card card-cascade m-1" *ngFor="let artnew of this.getAPI.articlesArr, let i=index">
 
       <!-- Card image -->
-      <div class="view view-cascade overlay {{themes.appChildTheme}}">
-        <img class="card-img-top" src={{artnew.urlToImage}} alt="Card image cap">
+      <div  class="view view-cascade overlay {{themes.appChildTheme}}">
+ 
+        <img *ngIf="artnew.urlToImage" class="card-img-top"  src={{artnew.urlToImage}} >
         <a>
           <div class="mask rgba-white-slight"></div>
         </a>
       </div>
       <!-- Card content -->
-      <div class="card-body card-body-cascade text-center  {{themes.appTheme}}">
+      <div class="card-body card-body-cascade text-center {{themes.appTheme}}">
         <!-- Title -->
         <h4 class="card-title"><strong>{{artnew.title}}</strong></h4>
         <h4 class="card-title">{{artnew.author}}</h4>
@@ -29,7 +30,8 @@
   </div>
 
   <!-- FOR SOURCES type results -->
-  <div #news id="news2" class="card-columns  {{themes.appTheme}}" *ngIf='!this.getAPI.sourceType'>
+  <div #news id="news2" class="card-columns  m-1 {{themes.appTheme}}" *ngIf='!this.getAPI.sourceType'>
+
     <div class="news card card-cascade  {{themes.appChildTheme}}" *ngFor="let srcnew of this.getAPI.sourcesArr, let i=index">
       <!-- Card content -->
       <div class="card-body card-body-cascade text-center ">
@@ -49,15 +51,3 @@
     </div>
   </div>
 
-
-<!--
-  id: string; --ok
-        name: string;  --ok
-        description: string; --ok
-        url: string;  --ok
-        category: string;  --ok
-        language: string;  --ok
-        country: string;  -- ok
-        img_flag: string; //<img src="https://www.countryflags.io/<CountryCode>/shiny/64.png"> --ok
-
-    -->

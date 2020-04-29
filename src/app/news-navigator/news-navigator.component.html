@@ -3,11 +3,12 @@
       <div class="mainNews row m-2 p-2 justify-content-center {{themes.appTheme}} {{themes.appBorderTheme}} ">
         <div id="header" class="col-md-12 text-center ">
           <h1 class="brand-title">The News Portal App </h1>
-          <small>from <u><a href="https://newsapi.org/">newsapi.org</a></u></small>
+          
 
-          <p class="brand-text">This page contain final project in Angular on FullStack .NET course in <a
-              href="https://www.int-college.co.il/"><u><b> iNT College.</b></u></a>
-            <br>Created by <a href="main#contpage" title="Edward T."><u><b> Tchaevsky E.</b></u></a></p>
+          <p class="brand-text">This page contain final project in Angular on FullStack .NET course in <a class="title2"
+              href="https://www.int-college.co.il/"><u><b> iNT College.</b></u></a><br>
+              Used API is from <u><a class="title2" href="https://newsapi.org/">newsapi.org</a></u>
+            <br>Created by <a class="title2" href="main#contpage" title="Edward T."><u><b> Tchaevsky E.</b></u></a></p>
          
         </div>
       </div>
@@ -94,4 +95,6 @@
         </p></div>
         
       </div>
-  </div>
+  </div><!-- "#05e4ff" -->
+
+  <ngx-spinner bdColor = "rgba(0, 0, 0, 0.8)" size = "large" color = "gold" type = "ball-spin-clockwise-fade-rotating" [fullScreen] = "false"><p style="color: rgb(255, 251, 0)" > Loading ... </p></ngx-spinner>

@@ -1,15 +1,13 @@
 <div class="main">
   <div class="logbtns">
     <button  class="logbtn btn btn-outline-warning" (click)="logOut()"
-     *ngIf="this.usersrv.Logined">LogOut</button>
+     *ngIf="this.usersrv.Logined"><i class="fas fa-sign-out-alt"></i> LogOut</button>
     <button  class="logbtn btn btn-success" (click)="logIn()"
-    *ngIf="!this.usersrv.Logined">LogIn</button>
+    *ngIf="!this.usersrv.Logined"><i class="fas fa-sign-in-alt"></i> LogIn</button>
   </div>
 
   <router-outlet></router-outlet>
-
-
-
+ 
 </div>
 <a id="arrowToStart" href="main#mainp" class="btn btn-up justify-content-center page-scroll animated "
   title="go to start">

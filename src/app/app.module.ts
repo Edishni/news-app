@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -22,6 +22,7 @@ import { NewsComponent } from './news/news.component';
 import { NewsNavigatorComponent } from './news-navigator/news-navigator.component';
 import { AboutComponent } from './about/about.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { NgxSpinnerModule } from "ngx-spinner";
 
 
 @NgModule({
@@ -45,7 +46,7 @@ import { ContactsComponent } from './contacts/contacts.component';
     BrowserAnimationsModule,
     MatSliderModule,
     FormsModule,   
-    
+    NgxSpinnerModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule, // imports firebase/firestore, only needed for database features
@@ -54,6 +55,7 @@ import { ContactsComponent } from './contacts/contacts.component';
   providers: [
     AuthorizationService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
