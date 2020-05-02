@@ -9,11 +9,13 @@ Possible to find a lot of news from API sources on newsapi.org site with next fi
   f. by word
   e. use sort type
   
+  Sevices and features:
 1. the user authorization mechanizm with social logins like Google and Facebook
 2. the authorization guard service
 3. has Routes usage
 4. the service for get API results
 5. the service for themes supporting on boostrap basic 
+
 6. Componets :
   DashboardComponent : root
       QuestComponent - first "welcome" page
@@ -22,6 +24,7 @@ Possible to find a lot of news from API sources on newsapi.org site with next fi
         - NavigatorComponent - Navigator panel
         - NewsNavigatorComponen - News search menu
         - NewsComponent - search results
+        - About-Portal  - about web page
         - AboutComponent - about iNT College
         - ContactsComponent - about me 
         - FooterComponent - footer 
